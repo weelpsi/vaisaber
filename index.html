@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fale comigo</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+
+<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+
+    <header> ÚLTIMO DIA: <span class="data">1/12/2023</span></header>
+
+
+    <div class="center-box">
+        <div class="box-header">
+            <h1>Você recebeu um novo áudio! 🔊</h1>
+        </div>
+        <img src="imgzap.png" alt="" class="box-img">
+        <p>Aperte o botão PLAY abaixo antes de começar a sua consulta 100% Online e Gratuita AO VIVO no Whatsapp! 🔊</p>
+
+
+
+        <div class="aplayer">
+
+
+            <audio id='track' src="aovivo/audiohome.m4a" crossorigin> </audio>
+            <div class="aplayer-btn-play">
+                <svg class="svg-icon icon-pause" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M735.059262 155.203828c-3.090385 0-115.797329 0-118.887714 0-19.643386 0-35.567054 15.923668-35.567054 35.567054 0 3.090385 0 639.366829 0 642.457214 0 19.643386 15.923668 35.567054 35.567054 35.567054 3.090385 0 115.797329 0 118.887714 0 19.643386 0 35.567054-15.923668 35.567054-35.567054 0-3.090385 0-639.366829 0-642.457214C770.626315 171.128519 754.702648 155.203828 735.059262 155.203828z" />
+                    <path d="M407.828452 155.203828c-3.090385 0-115.797329 0-118.887714 0-19.643386 0-35.567054 15.923668-35.567054 35.567054 0 3.090385 0 639.366829 0 642.457214 0 19.643386 15.923668 35.567054 35.567054 35.567054 3.090385 0 115.797329 0 118.887714 0 19.643386 0 35.567054-15.923668 35.567054-35.567054 0-3.090385 0-639.366829 0-642.457214C443.395506 171.128519 427.471838 155.203828 407.828452 155.203828z" />
+                </svg>
+                <svg class="svg-icon icon-play" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M852.727563 392.447107C956.997809 458.473635 956.941389 565.559517 852.727563 631.55032L281.888889 993.019655C177.618644 1059.046186 93.090909 1016.054114 93.090909 897.137364L93.090909 126.860063C93.090909 7.879206 177.675064-35.013033 281.888889 30.977769L852.727563 392.447107 852.727563 392.447107Z" />
+                </svg>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div id="showtime">
+            <p><b>Parabéns, você ganhou uma sessão AO VIVO comigo no WhatsApp.</b></p>
+            <a href='#' id="btnzap" class="btn">INICIAR SESSÃO GRATUITA</a>
+        </div>
+    </div>
+
+    <footer>TODOS OS DIREITOS RESERVADOS</footer>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+    <script src="scripts.js"></script>
+    <script>
+        if(location.href.indexOf("www") != -1){
+            document.getElementById("track").src = "https://www.funildepix.github.io/aovivo/audiohome.m4a";
+        }
+         
+        const listaWhatsApp = [];
+        //formato do número deve ser 5531992129106
+        listaWhatsApp.push("https://link.dispara.ai/522039a4-af3a-4381-a8f2-2cf9d4ba5567?text=Quero%20fazer%20uma%20consulta%20gratuita!");
+        listaWhatsApp.push("https://link.dispara.ai/522039a4-af3a-4381-a8f2-2cf9d4ba5567?text=Quero%20fazer%20uma%20consulta%20gratuita!");
+
+        function getRandomLogoUrl() {
+            return listaWhatsApp[Math.floor(Math.random() * listaWhatsApp.length)]
+        }
+        
+        var url = getRandomLogoUrl();
+        document.getElementById('btnzap').href = url;
+    </script>
+</body>
+
+</html>
